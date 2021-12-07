@@ -17,25 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiT-d8-p2g">
-                                <rect key="frame" x="30" y="74" width="354" height="748"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <color key="tintColor" name="AccentColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6v-Of-DwC">
-                                <rect key="frame" x="20" y="367" width="364" height="131"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="X1X-yX-FHx">
+                                <rect key="frame" x="20" y="64" width="374" height="788"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiT-d8-p2g">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="389"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6v-Of-DwC">
+                                        <rect key="frame" x="0.0" y="399" width="374" height="389"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="y6v-Of-DwC" firstAttribute="width" secondItem="TiT-d8-p2g" secondAttribute="width" id="dR4-au-gXx"/>
+                                    <constraint firstItem="y6v-Of-DwC" firstAttribute="height" secondItem="TiT-d8-p2g" secondAttribute="height" id="fU5-bL-D2r"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TiT-d8-p2g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="D2a-J7-NKa"/>
-                            <constraint firstItem="TiT-d8-p2g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vh3-A1-diU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TiT-d8-p2g" secondAttribute="trailing" constant="30" id="ZdQ-X9-wPO"/>
-                            <constraint firstItem="TiT-d8-p2g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="r8e-fW-JDN"/>
-                            <constraint firstItem="TiT-d8-p2g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdI-6x-M5b"/>
+                            <constraint firstItem="X1X-yX-FHx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7Ov-aY-FZJ"/>
+                            <constraint firstItem="X1X-yX-FHx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9fN-Sb-9OL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X1X-yX-FHx" secondAttribute="trailing" constant="20" id="eGc-m8-aH6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X1X-yX-FHx" secondAttribute="bottom" constant="10" id="fLW-Cn-Rsz"/>
                         </constraints>
                     </view>
                 </viewController>
